@@ -7,6 +7,11 @@ import MainRouter from './ReactRouter/MainRouter'
 function App() {
   const [input,setInput]=useState(0)
   const [count, setCount] = useState(0)
+
+  const [value,setValue]=useState(0);
+
+
+
   const [inputvalue,setInputvalue] =useState('')
   const ref=useRef(0);
 console.log('hellllllo'); 
@@ -34,6 +39,11 @@ console.log('hellllllo');
          
         <input type="text" onChange={handleinputchange}/>
         <h1>this is the changer value {inputvalue}</h1>
+
+
+        <h1>value is : {value}</h1>
+        <button onClick={() => setValue(value => value + 1)}> + </button>
+        <button onClick={()=>setValue(value => value - 1)}> - </button>
        
        </div>
      
