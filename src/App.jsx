@@ -10,11 +10,11 @@ function App() {
 
   const [value,setValue]=useState(0);
   const [time,setTime] =useState(0)
-  // useEffect(()=>{
-  //   setTimeout(() => {
-  //     setTime((prevtime)=>prevtime + 1)
-  //   },1000);
-  // })
+  useEffect(()=>{
+    setTimeout(() => {
+      setTime((prevtime)=>prevtime + 1)
+    },1000);
+  })
 
 
 
