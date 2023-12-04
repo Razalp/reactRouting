@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -9,6 +9,12 @@ function App() {
   const [count, setCount] = useState(0)
 
   const [value,setValue]=useState(0);
+  const [time,setTime] =useState(0)
+  // useEffect(()=>{
+  //   setTimeout(() => {
+  //     setTime((prevtime)=>prevtime + 1)
+  //   },1000);
+  // })
 
 
 
@@ -44,7 +50,7 @@ console.log('hellllllo');
         <h1>value is : {value}</h1>
         <button onClick={() => setValue(value => value + 1)}> + </button>
         <button onClick={()=>setValue(value => value - 1)}> - </button>
-       
+       <h1>your secound is going {time}</h1>
        </div>
      
     </>
